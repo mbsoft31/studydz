@@ -1,5 +1,14 @@
 //window.route = require('./route');
 window.Vue = require('vue');
+import VueGoogleApi from 'vue-google-api'
+
+const config = {
+    apiKey: ' AIzaSyC7ujYnYWjXCILy_tf2MXh0qL7yU1SgmEE ',
+    clientId: '916815294589-0vt4l7vrqlf29mbblfebd8g9a9dktlqa.apps.googleusercontent.com',
+    scope: 'https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.file',
+    discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"]
+}
+Vue.use(VueGoogleApi, config)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'

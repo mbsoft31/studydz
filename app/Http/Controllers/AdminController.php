@@ -9,11 +9,17 @@ use App\Section;
 
 class AdminController extends Controller
 {
-    
+
 	public function index(Request $request)
 	{
 		$sections = SectionResource::collection(Section::where('section_id', null)->get());
 		return view('admin.index', compact('sections'));
 	}
+
+	public function test(Request $request) {
+
+
+	    return view('admin.test');
+    }
 
 }

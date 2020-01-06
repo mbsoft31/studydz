@@ -12,7 +12,9 @@ Route::resource('section', 'SectionController');
 
 Route::prefix('admin')->group(function () {
 
-	Route::get('/', 'AdminController@index');
+    Route::get('/', 'AdminController@index');
+
+    Route::get('/test', 'AdminController@test');
 
 	Route::get('/section/{section}', 'SectionController@showUI');
 
