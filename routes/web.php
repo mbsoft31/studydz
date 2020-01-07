@@ -27,6 +27,6 @@ Route::prefix('admin')->group(function () {
 	    return $contents->where('type', '=', 'file'); // files
 	});
 
+
 });
 
-	
