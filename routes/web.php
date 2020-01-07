@@ -18,5 +18,15 @@ Route::prefix('admin')->group(function () {
 
 	Route::get('/section/{section}', 'SectionController@showUI');
 
+	Route::get('/list', function() {
+	    $dir = '/';
+	    $recursive = false; // Get subdirectories also?
+	    $contents = collect(Storage::cloud()->listContents($dir, $recursive));
+
+	    //return $contents->where('type', '=', 'dir'); // directories
+	    return $contents->where('type', '=', 'file'); // files
+	});
+
 });
 
+	
